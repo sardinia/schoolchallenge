@@ -1,0 +1,40 @@
+head
+  title ChampionSchool
+  
+body
+  +header
+  +board
+  +panel
+  +news
+
+
+template(name="header")
+  .header
+    h1 School Challenge
+    button(type="button") +
+    
+template(name="board")
+  +highchartsHelper(chartId="stats" chartWidth="100%" charHeight="100%" chartObject=topClasses)
+
+template(name="panel")
+  .panel(class="#{isSelected}")
+    .classi
+      each allClasses
+        .item(class="#{isClassSelected}")
+          span #{name}
+    .voti
+      .voto 0
+      .voto 1
+      .voto 2
+      .voto 3
+      .voto 4
+      .voto 5
+      .voto 6
+      .voto 7
+      .voto 8
+      .voto 9
+      .voto 10
+    .newClasse
+      input#inputCreazione(placeholder="Nome Classe")
+      button(type="button") ADD
+

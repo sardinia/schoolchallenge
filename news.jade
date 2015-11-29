@@ -1,0 +1,13 @@
+template(name="news")
+    .sidenav
+        .local
+          h1 Local News
+          .item
+            h2 Evento Hackerdromo
+            p Domenica 18 Ottobre presso questa sede si svolgera Hackerdromo
+        .national
+          h1 National News
+          .item
+            h2 #{national.title}
+            p #{national.description}
+            span {{livestamp national.pubDate}}
